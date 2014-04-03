@@ -6,3 +6,9 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
   blog.tag_template      = "tag.html"
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = "master"
+  deploy.build_before = true
+end
