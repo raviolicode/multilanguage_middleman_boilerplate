@@ -1,0 +1,6 @@
+<% blog.local_articles.each do |article| %>
+  <article>
+    <%= article.body %>
+  </article>
+<% end %>
+Year Path: '<%= blog_year_path(2014) %>'
