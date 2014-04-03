@@ -1,14 +1,17 @@
-multilanguage_middleman_boilerplate
-===================================
+Multi Language Blog with Middleman
+===========================================================
 
-Base code for creating a multi-language blog site with Middleman
+Boilerplate to create a multi-language blog with Middleman
 
 ## Usage
 
 ### Initialize your Blog Repo
+You need to create the repo, and clone it.
+
 ```
 git clone https://github.com/raviolicode/multilanguage_middleman_boilerplate.git
 cp -R multilanguage_middleman_boilerplate/* <YOUR GITHUB NAME>.github.io/
+cd <YOUR GITHUB NAME>.github.io
 bundle
 ```
 
