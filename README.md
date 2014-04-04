@@ -20,6 +20,7 @@ From now on, we'll call `REPO_NAME`:
 3. Initialize the boilerplate into your repo:
 
   ```
+  cd multilanguage_middleman_boilerplate
   REPO=~/code/REPO_NAME rake init
   cd ~/code/REPO_NAME
   ```
