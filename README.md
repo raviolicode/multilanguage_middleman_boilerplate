@@ -64,3 +64,10 @@ deploy.branch = "github-pages"
 
 To change other deployment options see the [Config Options in middleman-deploy](https://github.com/tvaughan/middleman-deploy/blob/master/USAGE).
 
+## Adding CSS Frameworks
+
+There are several [Middleman Frontend Templates](http://directory.middlemanapp.com/#/templates/all) to choose from.
+Customizations using Templates is easy, but can't be automated.
+
+To add a particular Template, just copy/overwrite the corresponding directories and files into the repo.
+Note that `source/calendar.html.erb` and `source/tag.erb` will no longer work, those files will need changes in the extension and markup in order to match the look and feel.
