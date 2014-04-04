@@ -1,57 +1,50 @@
 Multi Language Blog with Middleman
 ===========================================================
 
-Boilerplate to create a multi-language blog with Middleman
+Boilerplate to create a multi-language blog with Middleman.
+Markdown posts are managed from the `source` branch, and code for deployment is in `master`.
+
+From now on, we'll call `REPO_NAME` to `<YOUR GITHUB NAME>.github.io` if deploying to [GitHub Pages](https://pages.github.com).
 
 ## Usage
 
-### Initialize your Blog Repo
+1. Create your personal site repo `REPO_NAME` in GitHub and clone it locally.
 
-You need to create the repo, and clone it.
+2. Clone the Boilerplate
 
-```
-git clone https://github.com/raviolicode/multilanguage_middleman_boilerplate.git
-```
+  ```
+  git clone https://github.com/raviolicode/multilanguage_middleman_boilerplate.git
+  ```
 
-Initialize the boilerplate into your repo:
-```
-REPO_NAME=~/code/<YOUR GITHUB NAME>.github.io rake init
-```
+3. Initialize the boilerplate into your repo:
 
-This will:
-* copy the boilerplate into your blog repo
-* run bundle
-* create the `source` branch
-* add all the files to staging in Git
+  ```
+  REPO=~/code/REPO_NAME rake init
 
+  cd ~/code/REPO_NAME
+  ```
 
-### Push your the boilerplate to your branch
-``` 
-cd ~/code/<YOUR GITHUB NAME>.github.io
-```
+5.  Commit the boilerplate files on the `source` branch:
 
-You can edit the boilerplate like any Middleman app. Then commit and push your changes.
-```
-git commit -am "Initial commit"
-git push -u origin source
-```
+  ```
+  git commit -am "Initial commit"
+  git push -u origin source
+  ```
 
+6. Deploy to Github Pages:
 
-### Deploy
+  ```
+  middleman deploy
+  ```
+  
+7. See your blog published at `https://<YOUR GITHUB NAME>.github.io`
 
-Once you are happy with your changes, you can deploy it to Github Pages.
-
-```
-middleman deploy
-```
-
-
-## Deployment Configuration
+## Deployment Customization
 
 It uses [middleman-deploy](https://github.com/tvaughan/middleman-deploy) for deployment.
 I'm assuming you will have only one repo with remote `origin`, a branch `source` with the source code, and we want to deploy to `master`. 
 
-If you need to deploy to `github-pages` just change in `config.rb`:
+If you're using Git need to deploy to `github-pages` just change in `config.rb`:
 ```
 deploy.branch = "github-pages"
 ```
@@ -59,23 +52,17 @@ deploy.branch = "github-pages"
 To change other deployment options see the [Config Options in middleman-deploy](https://github.com/tvaughan/middleman-deploy/blob/master/USAGE).
 
 
-### See your blog published!
-Boilerplate is now published in `https://<YOUR GITHUB NAME>.github.io`
-
 ## Workflow to Customize your Blog
 
-### Edit Middleman Posts / Frontend
 Your source code from Middleman will be on the `source` branch.
 ```
-git checkout -b source
+git checkout source
 ```
-After you change all you need, you will commit your changes and push it to your `source` branch:
+After making changes, commit and push to your `source` branch:
 ```
 git push origin source
 ```
-
-### Deploy
-When you're ready to deploy, just:
+Then deploy it:
 ```
 middleman deploy
 ```
