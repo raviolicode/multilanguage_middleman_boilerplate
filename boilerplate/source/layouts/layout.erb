@@ -1,8 +1,12 @@
 <html>
-  <head></head>
+<head>
+  <title><%= page_title %></title>
+  <%= stylesheet_link_tag :app %>
+</head>
   <body>
     <h1><%= t :hello %></h1>
     <p><%= t :language %>: <%= lang %></p>
     <%= yield %>
+    <%= javascript_include_tag :app %>
   </body>
 </html>

@@ -12,3 +12,11 @@ activate :deploy do |deploy|
   deploy.branch = "master"
   deploy.build_before = true
 end
+
+set :blog_name, "Blog Name"
+
+helpers do
+  def page_title
+    blog_name
+  end
+end
