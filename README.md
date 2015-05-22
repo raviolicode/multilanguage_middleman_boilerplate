@@ -1,4 +1,4 @@
-Multi Language Blog with Middleman
+Multi Language Blog with Middleman!!
 ===========================================================
 
 Boilerplate to create a multi-language blog with [Middleman](https://github.com/middleman/middleman), and publish to [Github Pages](https://pages.github.com) or [BitBucket](https://bitbucket.org).
